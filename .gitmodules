@@ -1,0 +1,4 @@
+[submodule "docker-python"]
+	path = docker-python
+	url = https://github.com/koxudaxi/docker-python.git
+	branch = support_tag_string_v2_branch
