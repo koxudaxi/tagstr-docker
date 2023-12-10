@@ -27,8 +27,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## How to build from Dockerfile
 ```shell
-Or, you can build all images with the following command.
-```shell
 $ make build # default base image is alpine3.19
 $ make build BASE_IMAGE=slim-bookworm # base image is debian:bookworm-slim
 $ make build-all # build all base images
