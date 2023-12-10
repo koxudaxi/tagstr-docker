@@ -26,8 +26,6 @@ build:
 	fi
 	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${ORG}/python:3.12.0a7-tag-strings-v2-e37d679-${BASE_IMAGE}  -t ${ORG}/python:3.12.0a7-tag-strings-v2-${BASE_IMAGE}  -t  ${ORG}/python:3.12.0a7-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
 
-
-slim-bookworm:
 build-push:
 	make build OPTIONS="--push" BUILD_ARGS="--platform linux/amd64,linux/arm64"
 
@@ -46,4 +44,5 @@ docker-python:
 
 generate-dockerfile: docker-python
 	cd docker-python && ./apply-templates.sh
+	test ! -d "docker" && mkdir docker
 	cp -frpv docker-python/3.12.0a7/* docker/
