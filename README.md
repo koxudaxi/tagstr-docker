@@ -10,7 +10,7 @@ These images are built and published on [GitHub Actions](https://github.com/koxu
 
 ## How to pull from Docker Hub
 ```shell
-$ docker pull koxudaxi/python:3.12.0a7-slim-bookworm
+$ docker pull koxudaxi/python:3.12.0a7-alpine3.19
 ```
 
 ## How to run
