@@ -1,6 +1,6 @@
 DOCKER_COMMAND=docker
 BASE_IMAGE=alpine3.19
-ORG=koxudaxi
+LABEL_PREFIX=koxudaxi/
 OPTIONS=--load
 BUILD_ARGS=
 .PHONY: build dry-run update-submodule docker-python generate-dockerfile
@@ -24,7 +24,7 @@ build:
 		echo "docker/$(BASE_IMAGE) does not exist"; \
 		exit 1; \
 	fi
-	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${ORG}/python:3.12.0a7-tag-strings-v2-e37d679-${BASE_IMAGE}  -t ${ORG}/python:3.12.0a7-tag-strings-v2-${BASE_IMAGE}  -t  ${ORG}/python:3.12.0a7-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
+	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${LABEL_PREFIX}python:3.12.0a7-tag-strings-v2-e37d679-${BASE_IMAGE}  -t ${LABEL_PREFIX}python:3.12.0a7-tag-strings-v2-${BASE_IMAGE}  -t  ${LABEL_PREFIX}python:3.12.0a7-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
 
 build-push:
 	make build OPTIONS="--push" BUILD_ARGS="--platform linux/amd64,linux/arm64"
