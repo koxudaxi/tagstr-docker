@@ -9,10 +9,6 @@ FROM alpine:3.19
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
-# http://bugs.python.org/issue19846
-# > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
-ENV LANG C.UTF-8
-
 # runtime dependencies
 RUN set -eux; \
 	apk add --no-cache \
@@ -20,7 +16,7 @@ RUN set -eux; \
 		tzdata \
 	;
 
-ENV PYTHON_VERSION 3.12.0a7
+ENV PYTHON_VERSION 3.14.0a0
 
 RUN set -eux; \
 	\
@@ -56,14 +52,14 @@ RUN set -eux; \
 		zlib-dev \
 	; \
 	\
-	git clone -b tag-strings-v2 --depth 1 https://github.com/gvanrossum/cpython.git /usr/src/python; \
+    git clone -b tag-strings-rebased --depth 1 https://github.com/lysnikolaou/cpython.git /usr/src/python; \
 	\
 	cd /usr/src/python; \
 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
 	./configure \
 		--build="$gnuArch" \
 		--enable-loadable-sqlite-extensions \
-		--enable-optimizations \
+		$(test "$gnuArch" != 'riscv64-linux-musl' && echo '--enable-optimizations') \
 		--enable-option-checking=fatal \
 		--enable-shared \
 		--with-lto \
@@ -121,10 +117,10 @@ RUN set -eux; \
 	done
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 23.2.1
+ENV PYTHON_PIP_VERSION 24.1.1
 # https://github.com/pypa/get-pip
-ENV PYTHON_GET_PIP_URL https://github.com/pypa/get-pip/raw/4cfa4081d27285bda1220a62a5ebf5b4bd749cdb/public/get-pip.py
-ENV PYTHON_GET_PIP_SHA256 9cc01665956d22b3bf057ae8287b035827bfd895da235bcea200ab3b811790b6
+ENV PYTHON_GET_PIP_URL https://github.com/pypa/get-pip/raw/ac00c61f60b2df101b7cdf90ed319b625ac93b42/public/get-pip.py
+ENV PYTHON_GET_PIP_SHA256 0f8bb2652c0b0965f268312f49ec21e772d421d381af4324beea66b8acf2635c
 
 RUN set -eux; \
 	\

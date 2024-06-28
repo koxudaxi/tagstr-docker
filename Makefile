@@ -1,5 +1,5 @@
 DOCKER_COMMAND=docker
-BASE_IMAGE=alpine3.19
+BASE_IMAGE=alpine3.20
 LABEL_PREFIX=koxudaxi/
 OPTIONS=--load
 BUILD_ARGS=
@@ -24,7 +24,7 @@ build:
 		echo "docker/$(BASE_IMAGE) does not exist"; \
 		exit 1; \
 	fi
-	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${LABEL_PREFIX}python:3.12.0a7-tag-strings-v2-e37d679-${BASE_IMAGE}  -t ${LABEL_PREFIX}python:3.12.0a7-tag-strings-v2-${BASE_IMAGE}  -t  ${LABEL_PREFIX}python:3.12.0a7-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
+	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${LABEL_PREFIX}python:3.14.0a0-tag-strings-rebased-704fafe-${BASE_IMAGE}  -t ${LABEL_PREFIX}python:3.14.0a0-tag-strings-rebased-${BASE_IMAGE}  -t  ${LABEL_PREFIX}python:3.14.0a0-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
 
 build-push:
 	make build OPTIONS="--push" BUILD_ARGS="--platform linux/amd64,linux/arm64"
@@ -37,7 +37,7 @@ ls-base-image:
 
 update-submodule:
 	git submodule update --init --recursive
-	git submodule foreach git pull origin support_tag_string_v2_branch
+	git submodule foreach git pull origin support_tag_strings_rebased
 
 docker-python:
 	 make update-submodule
@@ -45,4 +45,4 @@ docker-python:
 generate-dockerfile: docker-python
 	cd docker-python && ./apply-templates.sh
 	test ! -d "docker" && mkdir docker
-	cp -frpv docker-python/3.12.0a7/* docker/
+	cp -frpv docker-python/3.14.0a0/* docker/

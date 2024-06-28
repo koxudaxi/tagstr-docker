@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        base_image: [ "alpine3.18", "alpine3.19", "bookworm" ,"bullseye" ,"slim-bookworm"  ,"slim-bullseye" ]
+        base_image: [ "alpine3.20", "alpine3.19", "bookworm" ,"bullseye" ,"slim-bookworm"  ,"slim-bullseye" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,9 +29,9 @@ jobs:
             koxudaxi/python
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=raw,value=3.12.0a7-${{ matrix.base_image }}
-            type=raw,value=3.12.0a7-tag-strings-v2-${{ matrix.base_image }}
-            type=raw,value=3.12.0a7-tag-strings-v2-e37d679-${{ matrix.base_image }}
+            type=raw,value=3.14.0a0-${{ matrix.base_image }}
+            type=raw,value=3.14.0a0-tag-strings-rebased-${{ matrix.base_image }}
+            type=raw,value=3.14.0a0-tag-strings-rebased-704fafe-${{ matrix.base_image }}
             type=sha
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
