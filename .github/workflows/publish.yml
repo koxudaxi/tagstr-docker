@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        base_image: [ "alpine3.18", "alpine3.19", "bookworm" ,"bullseye" ,"slim-bookworm"  ,"slim-bullseye" ]
+        base_image: [ "alpine3.20", "alpine3.19", "bookworm" ,"bullseye" ,"slim-bookworm"  ,"slim-bullseye" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
