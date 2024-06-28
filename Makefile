@@ -1,5 +1,5 @@
 DOCKER_COMMAND=docker
-BASE_IMAGE=alpine3.19
+BASE_IMAGE=alpine3.20
 LABEL_PREFIX=koxudaxi/
 OPTIONS=--load
 BUILD_ARGS=
@@ -45,4 +45,4 @@ docker-python:
 generate-dockerfile: docker-python
 	cd docker-python && ./apply-templates.sh
 	test ! -d "docker" && mkdir docker
-	cp -frpv docker-python/3.12.0a7/* docker/
+	cp -frpv docker-python/3.14.0a0/* docker/
