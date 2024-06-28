@@ -10,13 +10,13 @@ These images are built and published on [GitHub Actions](https://github.com/koxu
 
 ## How to pull from Docker Hub
 ```shell
-$ docker pull koxudaxi/python:3.14.0a0-alpine3.19
+$ docker pull koxudaxi/python:3.14.0a0-alpine3.20
 ```
 
 ## How to run
 ```shell
 $ docker run -it --rm koxudaxi/python:3.14.0a0-alpine3.19
-Python 3.12.0+ (heads/tag-strings-rebased:c7c5cd4, Dec 10 2023, 19:33:29) [GCC 13.2.1 20231014] on linux
+Python 3.14.0a0 (heads/tag-strings-rebased:704fafe, Jun 28 2024, 07:38:57) [GCC 13.2.1 20240309] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> def html(content):
 ...     return f"<html>{content}</html>"
@@ -33,7 +33,7 @@ $ make build-all # build all base images
 ```
 
 ## Base images
-- alpine3.18
+- alpine3.20
 - alpine3.19
 - bookworm
 - bullseye
@@ -42,8 +42,8 @@ $ make build-all # build all base images
 ## All tags for each base image
 - alpine3.18
   - 3.14.0a0-alpine3.18
-  - 3.14.0a0-tag-strings-rebased-alpine3.18
-  - 3.14.0a0-tag-strings-rebased-e37d679-alpine3.18
+  - 3.14.0a0-tag-strings-rebased-alpine3.20
+  - 3.14.0a0-tag-strings-rebased-e37d679-alpine3.20
 - alpine3.19
   - 3.14.0a0-alpine3.19
   - 3.14.0a0-tag-strings-rebased-alpine3.19
@@ -61,6 +61,6 @@ $ make build-all # build all base images
   - 3.14.0a0-tag-strings-rebased-slim-bookworm
   - 3.14.0a0-tag-strings-rebased-e37d679-slim-bookworm
 - slim-bullseye
-  - 3.14.0a0-slim-bookworm
-  - 3.14.0a0-tag-strings-rebased-slim-bookworm
-  - 3.14.0a0-tag-strings-rebased-e37d679-slim-bookworm
+  - 3.14.0a0-slim-bullseye
+  - 3.14.0a0-tag-strings-rebased-slim-bullseye
+  - 3.14.0a0-tag-strings-rebased-e37d679-slim-bullseye
