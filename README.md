@@ -10,12 +10,12 @@ These images are built and published on [GitHub Actions](https://github.com/koxu
 
 ## How to pull from Docker Hub
 ```shell
-$ docker pull koxudaxi/python:3.12.0a7-alpine3.19
+$ docker pull koxudaxi/python:3.14.0a0-alpine3.19
 ```
 
 ## How to run
 ```shell
-$ docker run -it --rm koxudaxi/python:3.12.0a7-alpine3.19
+$ docker run -it --rm koxudaxi/python:3.14.0a0-alpine3.19
 Python 3.12.0+ (heads/tag-strings-rebased:c7c5cd4, Dec 10 2023, 19:33:29) [GCC 13.2.1 20231014] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> def html(content):
@@ -41,26 +41,26 @@ $ make build-all # build all base images
 - slim-bullseye
 ## All tags for each base image
 - alpine3.18
-  - 3.12.0a7-alpine3.18
-  - 3.12.0a7-tag-strings-rebased-alpine3.18
-  - 3.12.0a7-tag-strings-rebased-e37d679-alpine3.18
+  - 3.14.0a0-alpine3.18
+  - 3.14.0a0-tag-strings-rebased-alpine3.18
+  - 3.14.0a0-tag-strings-rebased-e37d679-alpine3.18
 - alpine3.19
-  - 3.12.0a7-alpine3.19
-  - 3.12.0a7-tag-strings-rebased-alpine3.19
-  - 3.12.0a7-tag-strings-rebased-e37d679-alpine3.19
+  - 3.14.0a0-alpine3.19
+  - 3.14.0a0-tag-strings-rebased-alpine3.19
+  - 3.14.0a0-tag-strings-rebased-e37d679-alpine3.19
 - bookworm 
-  - 3.12.0a7-bookworm
-  - 3.12.0a7-tag-strings-rebased-bookworm
-  - 3.12.0a7-tag-strings-rebased-e37d679-bookworm
+  - 3.14.0a0-bookworm
+  - 3.14.0a0-tag-strings-rebased-bookworm
+  - 3.14.0a0-tag-strings-rebased-e37d679-bookworm
 - bullseye
-  - 3.12.0a7-bullseye
-  - 3.12.0a7-tag-strings-rebased-bullseye
-  - 3.12.0a7-tag-strings-rebased-e37d679-bullseye
+  - 3.14.0a0-bullseye
+  - 3.14.0a0-tag-strings-rebased-bullseye
+  - 3.14.0a0-tag-strings-rebased-e37d679-bullseye
 - slim-bookworm
-  - 3.12.0a7-slim-bookworm
-  - 3.12.0a7-tag-strings-rebased-slim-bookworm
-  - 3.12.0a7-tag-strings-rebased-e37d679-slim-bookworm
+  - 3.14.0a0-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-e37d679-slim-bookworm
 - slim-bullseye
-  - 3.12.0a7-slim-bookworm
-  - 3.12.0a7-tag-strings-rebased-slim-bookworm
-  - 3.12.0a7-tag-strings-rebased-e37d679-slim-bookworm
+  - 3.14.0a0-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-e37d679-slim-bookworm
