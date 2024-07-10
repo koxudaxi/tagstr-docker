@@ -16,7 +16,7 @@ $ docker pull koxudaxi/python:3.14.0a0-alpine3.20
 ## How to run
 ```shell
 $ docker run -it --rm koxudaxi/python:3.14.0a0-alpine3.20
-Python 3.14.0a0 (heads/tag-strings-rebased:704fafe, Jun 28 2024, 07:38:57) [GCC 13.2.1 20240309] on linux
+Python 3.14.0a0 (heads/tag-strings-rebased:62c9e0a, Jun 28 2024, 07:38:57) [GCC 13.2.1 20240309] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> def html(content):
 ...     return f"<html>{content}</html>"
@@ -43,24 +43,24 @@ $ make build-all # build all base images
 - alpine3.20
   - 3.14.0a0-alpine3.20
   - 3.14.0a0-tag-strings-rebased-alpine3.20
-  - 3.14.0a0-tag-strings-rebased-704fafe-alpine3.20
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-alpine3.20
 - alpine3.19
   - 3.14.0a0-alpine3.19
   - 3.14.0a0-tag-strings-rebased-alpine3.19
-  - 3.14.0a0-tag-strings-rebased-704fafe-alpine3.19
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-alpine3.19
 - bookworm 
   - 3.14.0a0-bookworm
   - 3.14.0a0-tag-strings-rebased-bookworm
-  - 3.14.0a0-tag-strings-rebased-704fafe-bookworm
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-bookworm
 - bullseye
   - 3.14.0a0-bullseye
   - 3.14.0a0-tag-strings-rebased-bullseye
-  - 3.14.0a0-tag-strings-rebased-704fafe-bullseye
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-bullseye
 - slim-bookworm
   - 3.14.0a0-slim-bookworm
   - 3.14.0a0-tag-strings-rebased-slim-bookworm
-  - 3.14.0a0-tag-strings-rebased-704fafe-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-slim-bookworm
 - slim-bullseye
   - 3.14.0a0-slim-bullseye
   - 3.14.0a0-tag-strings-rebased-slim-bullseye
-  - 3.14.0a0-tag-strings-rebased-704fafe-slim-bullseye
+  - 3.14.0a0-tag-strings-rebased-62c9e0a-slim-bullseye
