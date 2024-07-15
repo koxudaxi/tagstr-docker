@@ -16,7 +16,7 @@ $ docker pull koxudaxi/python:3.14.0a0-alpine3.20
 ## How to run
 ```shell
 $ docker run -it --rm koxudaxi/python:3.14.0a0-alpine3.20
-Python 3.14.0a0 (heads/tag-strings-rebased:03af022, Jun 28 2024, 07:38:57) [GCC 13.2.1 20240309] on linux
+Python 3.14.0a0 (heads/tag-strings-rebased:03af022, Jul 15 2024, 17:12:48) [GCC 13.2.1 20240309] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> def html(content):
 ...     return f"<html>{content}</html>"
