@@ -92,5 +92,5 @@ jobs:
           GIT_COMMIT_HASH= envsubst  < README.md.template > README.md
           git add README.md
           COMMIT_MESSAGE="Update README.md with the latest commit hash ${GIT_COMMIT_HASH}"
-          git commit -m $COMMIT_MESSAGE
+          git commit -m "$COMMIT_MESSAGE"
           git push origin main
