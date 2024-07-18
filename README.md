@@ -43,30 +43,30 @@ $ make build-all # build all base images
 - alpine3.20
   - 3.14.0a0-alpine3.20
   - 3.14.0a0-tag-strings-rebased-alpine3.20
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-alpine3.20
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-alpine3.20
+  - 3.14.0a0-tag-strings-rebased-03af022-alpine3.20
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-alpine3.20
 - alpine3.19
   - 3.14.0a0-alpine3.19
   - 3.14.0a0-tag-strings-rebased-alpine3.19
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-alpine3.19
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-alpine3.19
+  - 3.14.0a0-tag-strings-rebased-03af022-alpine3.19
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-alpine3.19
 - bookworm 
   - 3.14.0a0-bookworm
   - 3.14.0a0-tag-strings-rebased-bookworm
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-bookworm
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-bookworm
+  - 3.14.0a0-tag-strings-rebased-03af022-bookworm
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-bookworm
 - bullseye
   - 3.14.0a0-bullseye
   - 3.14.0a0-tag-strings-rebased-bullseye
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-bullseye
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-bullseye
+  - 3.14.0a0-tag-strings-rebased-03af022-bullseye
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-bullseye
 - slim-bookworm
   - 3.14.0a0-slim-bookworm
   - 3.14.0a0-tag-strings-rebased-slim-bookworm
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-slim-bookworm
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-03af022-slim-bookworm
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-slim-bookworm
 - slim-bullseye
   - 3.14.0a0-slim-bullseye
   - 3.14.0a0-tag-strings-rebased-slim-bullseye
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_SHORT_HASH}-slim-bullseye
-  - 3.14.0a0-tag-strings-rebased-${GIT_COMMIT_HASH}-slim-bullseye
+  - 3.14.0a0-tag-strings-rebased-03af022-slim-bullseye
+  - 3.14.0a0-tag-strings-rebased-03af022d1285dbb42795591b7efbcc63cf9882c0-slim-bullseye

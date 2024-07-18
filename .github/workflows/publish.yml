@@ -9,7 +9,8 @@ on:
   pull_request:
     branches:
       - "main"
-
+  schedule:
+    - cron:  '0 0,12 * * *'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -85,11 +86,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_COMMIT_HASH: ${{ steps.get_commit_hash.outputs.commit_hash }}
-          GTI_SHORT_COMMIT_HASH: ${{ steps.get_commit_hash.outputs.short_commit_hash }}
+          GIT_COMMIT_SHORT_HASH: ${{ steps.get_commit_hash.outputs.short_commit_hash }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          GIT_COMMIT_HASH= envsubst  < README.md.template > README.md
+          envsubst  < README.md.template > README.md
           git add README.md
           COMMIT_MESSAGE="Update README.md with the latest commit hash ${GIT_COMMIT_HASH}"
           git commit -m "$COMMIT_MESSAGE"
