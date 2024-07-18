@@ -24,7 +24,7 @@ build:
 		echo "docker/$(BASE_IMAGE) does not exist"; \
 		exit 1; \
 	fi
-	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS} -t ${LABEL_PREFIX}python:3.14.0a0-tag-strings-rebased-03af022-${BASE_IMAGE}  -t ${LABEL_PREFIX}python:3.14.0a0-tag-strings-rebased-${BASE_IMAGE}  -t  ${LABEL_PREFIX}python:3.14.0a0-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
+	cd docker && ${DOCKER_COMMAND} buildx build ${BUILD_ARGS}  -t ${LABEL_PREFIX}python:3.14.0a0-tag-strings-rebased-${BASE_IMAGE}  -t  ${LABEL_PREFIX}python:3.14.0a0-${BASE_IMAGE} ${BASE_IMAGE} ${OPTIONS}
 
 build-push:
 	make build OPTIONS="--push" BUILD_ARGS="--platform linux/amd64,linux/arm64"
