@@ -1,3 +1,5 @@
+# The project was merged into [pauleveritt/tagstr-site](https://github.com/pauleveritt/tagstr-site/tree/main/docker)
+
 # tagstr-docker
 
 This directory contains Dockerfiles for CPython of lysnikolaou's [tag-strings-rebased](https://github.com/lysnikolaou/cpython/tree/tag-strings-rebased) branch.
