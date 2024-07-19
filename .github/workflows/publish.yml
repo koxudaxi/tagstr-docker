@@ -95,3 +95,11 @@ jobs:
           COMMIT_MESSAGE="Update README.md with the latest commit hash ${GIT_COMMIT_HASH}"
           git commit -m "$COMMIT_MESSAGE"
           git push origin main
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v4
+        if: github.ref == 'refs/heads/main' && matrix.base_image == 'alpine3.20' && steps.check-image.outputs.exists == 'false'
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: koxudaxi/python
+          readme-filepath: ./README.md
